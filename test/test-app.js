@@ -1,7 +1,7 @@
 /* global it, describe, before */
 'use strict';
 var path = require('path');
-var assert = require('yeoman-generator').assert;
+var assert = require('yeoman-assert');
 var helpers = require('yeoman-generator').test;
 var os = require('os');
 
@@ -10,7 +10,7 @@ describe('todomvc-app generator', function () {
 		helpers.run(path.join(__dirname, '../app'))
 			.inDir(path.join(os.tmpdir(), './temp-test'))
 			.withOptions({'skip-install': true})
-			.withPrompt({someOption: true})
+			.withPrompts({someOption: true})
 			.on('end', done);
 	});
 

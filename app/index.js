@@ -1,6 +1,7 @@
 'use strict';
 var yeoman = require('yeoman-generator');
 var chalk = require('chalk');
+var mkdirp = require('mkdirp');
 var yosay = require('yosay');
 
 module.exports = yeoman.generators.Base.extend({
@@ -32,8 +33,8 @@ module.exports = yeoman.generators.Base.extend({
 
 			this.copy('_package.json', 'package.json');
 
-			this.mkdir('js');
-			this.mkdir('css');
+			mkdirp('js');
+			mkdirp('css');
 
 			this.copy('js/app.js');
 			this.copy('css/app.css');
