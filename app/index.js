@@ -1,16 +1,10 @@
 'use strict';
 var yeoman = require('yeoman-generator');
-var chalk = require('chalk');
 var mkdirp = require('mkdirp');
-var yosay = require('yosay');
 
 module.exports = yeoman.generators.Base.extend({
 	prompting: function () {
 		var done = this.async();
-
-		this.log(yosay(
-			'Welcome to the extraordinary ' + chalk.red('Todomvc app') + ' generator!'
-		));
 
 		var prompts = [{
 			message: 'Please enter the name of the framework:',
