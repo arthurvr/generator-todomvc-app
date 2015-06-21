@@ -21,4 +21,4 @@ $ yo todomvc-app
 
 ## License
 
-MIT
+MIT © [Arthur Verschaeve](https://github.com/arthurvr)
