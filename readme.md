@@ -4,20 +4,21 @@
 
 
 
-### Install
+## Install
 
 ```
-$ npm install -g generator-todomvc-app
+$ npm install --global generator-todomvc-app
 ```
 
 
-### Usage
+## Usage
 
 Call the generator using Yo.
 
 ```
 $ yo todomvc-app
 ```
+
 
 ## License
 
