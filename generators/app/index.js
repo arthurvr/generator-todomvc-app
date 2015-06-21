@@ -9,15 +9,24 @@ module.exports = yeoman.generators.Base.extend({
 
 		var prompts = [{
 			message: 'Please enter the name of the framework:',
-			name: 'framework'
+			name: 'framework',
+			validate: function (val) {
+				return val.length > 0 ? true : 'A framework name is required';
+			}
 		}, {
 			message: 'Please enter your name:',
 			name: 'authorName',
-			store: true
+			store: true,
+			validate: function (val) {
+				return val.length > 0 ? true : 'An author name is required';
+			}
 		}, {
 			message: 'Please enter the URL of your website:',
 			name: 'authorSite',
 			store: true,
+			validate: function (val) {
+				return val.length > 0 ? true : 'An author site is required';
+			},
 			filter: function (val) {
 				return normalizeUrl(val);
 			}
