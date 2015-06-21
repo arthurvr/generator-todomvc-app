@@ -8,21 +8,21 @@ module.exports = yeoman.generators.Base.extend({
 		var done = this.async();
 
 		var prompts = [{
-			message: 'Please enter the name of the framework:',
 			name: 'framework',
+			message: 'Please enter the name of the framework:',
 			validate: function (val) {
 				return val.length > 0 ? true : 'A framework name is required';
 			}
 		}, {
-			message: 'Please enter your name:',
 			name: 'authorName',
+			message: 'Please enter your name:',
 			store: true,
 			validate: function (val) {
 				return val.length > 0 ? true : 'An author name is required';
 			}
 		}, {
-			message: 'Please enter the URL of your website:',
 			name: 'authorSite',
+			message: 'Please enter the URL of your website:',
 			store: true,
 			validate: function (val) {
 				return val.length > 0 ? true : 'An author site is required';
