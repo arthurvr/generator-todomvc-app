@@ -3,7 +3,7 @@
   "version": "1.1.1",
   "description": "Yeoman generator",
   "license": "MIT",
-  "main": "app/index.js",
+  "main": "generators/app/index.js",
   "repository": "arthurvr/generator-todomvc-app",
   "author": {
     "name": "Arthur Verschaeve",
@@ -17,7 +17,7 @@
     "test": "mocha"
   },
   "files": [
-    "app"
+    "generators"
   ],
   "keywords": [
     "yeoman-generator"
