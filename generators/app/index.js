@@ -1,5 +1,6 @@
 'use strict';
 var yeoman = require('yeoman-generator');
+var normalizeUrl = require('normalize-url');
 var mkdirp = require('mkdirp');
 
 module.exports = yeoman.generators.Base.extend({
@@ -16,7 +17,10 @@ module.exports = yeoman.generators.Base.extend({
 		}, {
 			message: 'Please enter the URL of your website:',
 			name: 'authorSite',
-			store: true
+			store: true,
+			filter: function (val) {
+				return normalizeUrl(val);
+			}
 		}];
 
 		this.prompt(prompts, function (props) {
