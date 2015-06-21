@@ -20,18 +20,14 @@ module.exports = yeoman.generators.Base.extend({
 		}];
 
 		this.prompt(prompts, function (props) {
-			this.props = props;
-
-			this.template('readme.md');
-			this.template('index.html');
-
-			this.copy('_package.json', 'package.json');
-
 			mkdirp('js');
 			mkdirp('css');
 
-			this.copy('js/app.js');
-			this.copy('css/app.css');
+			['readme.md', 'index.html', 'js/app.js', 'css/app.css'].forEach(function (file) {
+				this.fs.copyTpl(this.templatePath(file), this.destinationPath(file), props);
+			}.bind(this));
+
+			this.fs.copy(this.templatePath('_package.json'), this.destinationPath('package.json'));
 
 			done();
 		}.bind(this));

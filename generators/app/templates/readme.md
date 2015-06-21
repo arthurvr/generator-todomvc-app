@@ -1,4 +1,4 @@
-# <%= props.framework %> • [TodoMVC](http://todomvc.com)
+# <%= framework %> • [TodoMVC](http://todomvc.com)
 
 > Official description of the framework (from its website)
 
@@ -32,4 +32,4 @@ How was the app created? Anything worth sharing about the process of creating th
 
 ## Credit
 
-Created by [<%= props.authorName %>](<%= props.authorSite %>)
+Created by [<%= authorName %>](<%= authorSite %>)
