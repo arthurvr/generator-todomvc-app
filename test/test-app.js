@@ -8,7 +8,7 @@ var os = require('os');
 describe('todomvc-app generator', function () {
 	before(function (done) {
 		helpers.run(path.join(__dirname, '../generators/app'))
-			.inDir(path.join(os.tmpdir(), './temp-test'))
+			.inTmpDir()
 			.withOptions({'skip-install': true})
 			.withPrompts({someOption: true})
 			.on('end', done);
