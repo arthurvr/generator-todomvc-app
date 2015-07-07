@@ -10,7 +10,6 @@ describe('todomvc-app generator', function () {
 		helpers.run(path.join(__dirname, '../generators/app'))
 			.inTmpDir()
 			.withOptions({'skip-install': true})
-			.withPrompts({someOption: true})
 			.on('end', done);
 	});
 
