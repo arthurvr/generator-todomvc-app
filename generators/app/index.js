@@ -27,9 +27,7 @@ module.exports = yeoman.generators.Base.extend({
 			validate: function (val) {
 				return val.length > 0 ? true : 'An author site is required';
 			},
-			filter: function (val) {
-				return normalizeUrl(val);
-			}
+			filter: normalizeUrl
 		}];
 
 		this.prompt(prompts, function (props) {
