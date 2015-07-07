@@ -3,7 +3,6 @@
 var path = require('path');
 var assert = require('yeoman-assert');
 var helpers = require('yeoman-generator').test;
-var os = require('os');
 
 describe('todomvc-app generator', function () {
 	before(function (done) {
