@@ -3,7 +3,6 @@
 > [Yeoman](http://yeoman.io) generator for the [TodoMVC app template](https://github.com/tastejs/todomvc-app-template). Scaffolds a new TodoMVC app
 
 
-
 ## Install
 
 ```
@@ -22,4 +21,4 @@ $ yo todomvc-app
 
 ## License
 
-MIT © [Arthur Verschaeve](https://github.com/arthurvr)
+MIT © [Arthur Verschaeve](http://arthurverschaeve.be)
