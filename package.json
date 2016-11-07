@@ -1,7 +1,7 @@
 {
   "name": "generator-todomvc-app",
   "version": "1.2.0",
-  "description": "Yeoman generator",
+  "description": "Yeoman generator to scaffold a new TodoMVC implementation",
   "license": "MIT",
   "main": "generators/app/index.js",
   "repository": "arthurvr/generator-todomvc-app",
