@@ -3,10 +3,8 @@ var yeoman = require('yeoman-generator');
 var normalizeUrl = require('normalize-url');
 var mkdirp = require('mkdirp');
 
-module.exports = yeoman.generators.Base.extend({
+module.exports = yeoman.Base.extend({
 	prompting: function () {
-		var done = this.async();
-
 		var prompts = [{
 			name: 'framework',
 			message: 'Please enter the name of the framework:',
@@ -30,7 +28,7 @@ module.exports = yeoman.generators.Base.extend({
 			filter: normalizeUrl
 		}];
 
-		this.prompt(prompts, function (props) {
+		return this.prompt(prompts).then(function (props) {
 			mkdirp('js');
 			mkdirp('css');
 
@@ -39,8 +37,6 @@ module.exports = yeoman.generators.Base.extend({
 			}.bind(this));
 
 			this.fs.copy(this.templatePath('_package.json'), this.destinationPath('package.json'));
-
-			done();
 		}.bind(this));
 	},
 
